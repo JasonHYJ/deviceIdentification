@@ -9,7 +9,37 @@ This repository includes the code, a subset of public datasets, and the result v
 
 ## Project Structure
 
-├─ README.txt # 顶层总览与执行指南（必须） ├─ install.sh # 一键安装（建议保留，很简短） ├─ requirements.txt # 依赖清单（建议） ├─ license.txt # 许可证名称与URL（与仓库 LICENSE 对应） ├─ use.txt # 预期用途与限制（研究用途、无敏感数据等） ├─ artifact/ # 你的主体代码（等同于原 code/） │ ├─ PeriodProcess/ │ ├─ preProcess/ │ ├─ SignatureGeneration/ │ ├─ SignatureMatching/ │ ├─ testProcessCode/ │ └─ data/ │ ├─ samples/ # 可选：放极小子集，保证离线可跑 │ └─ README.md # 数据说明/下载方式（如需） ├─ scripts/ │ ├─ run_all.sh # 依序调用四阶段脚本（照你编号调用） │ ├─ run_preprocess.sh │ ├─ run_fingerprint.sh │ └─ run_match.sh ├─ claims/ │ └─ claim1/ │ ├─ claim.txt # 例如“在公开数据集达到≈98.82%” │ ├─ run.sh # 跑一个“缩小版”流程（快） │ └─ expected/ │ └─ check.json # 期望指标或阈值（例如 acc ≥ 0.97） └─ infrastructure/ └─ README.md
+The repository is organized into the following folders:
+
+### 1. `artifact/` (Code)
+This folder contains the source code implementing the key steps of the identification pipeline:
+.
+├─ README.txt # Top-level overview and execution guide (required)
+├─ install.sh # One-click installation script (recommended)
+├─ requirements.txt # Dependency list (recommended)
+├─ license.txt # License name and URL (corresponding to the LICENSE file in the repository)
+├─ use.txt # Intended use and limitations (research purposes, no sensitive data, etc.)
+├─ artifact/ # Main code folder (equivalent to the original code/ folder)
+│ ├─ PeriodProcess/ # Scripts for preprocessing idle traffic and session segmentation
+│ ├─ preProcess/ # Feature extraction and clustering for identifying key packets
+│ ├─ SignatureGeneration/ # Generates device fingerprints based on header features and payload LSH
+│ ├─ SignatureMatching/ # Matching test samples to the stored device fingerprints
+│ ├─ testProcessCode/ # Auxiliary scripts for evaluation, such as confusion matrix generation
+│ └─ data/ # Subset of datasets and instructions for obtaining the full datasets
+│ ├─ samples/ # Optional: minimal subset for offline testing
+│ └─ README.md # Dataset explanation and download instructions
+├─ scripts/ # Scripts to run different stages of the pipeline
+│ ├─ run_all.sh # Sequentially calls all stages (as per numbering in original scripts)
+│ ├─ run_preprocess.sh # Calls preprocessing scripts
+│ ├─ run_fingerprint.sh # Calls fingerprint generation scripts
+│ └─ run_match.sh # Calls the matching script
+├─ claims/ # Folder for reproducibility claims and validation (optional)
+│ └─ claim1/ # Example claim folder (e.g., accuracy claim)
+│ ├─ claim.txt # Brief description of the claim
+│ ├─ run.sh # Script to reproduce the claim result
+│ └─ expected/ # Expected output or validation information (e.g., accuracy threshold)
+└─ infrastructure/ # Folder for infrastructure setup or platform instructions
+└─ README.md # Instructions for running the code on public platforms (e.g., Google Colab)
 
 ---
 
