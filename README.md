@@ -13,33 +13,31 @@ The repository is organized into the following folders:
 
 ### 1. `artifact/` (Code)
 This folder contains the source code implementing the key steps of the identification pipeline:
-.
-├─ README.txt # Top-level overview and execution guide (required)
-├─ install.sh # One-click installation script (recommended)
-├─ requirements.txt # Dependency list (recommended)
-├─ license.txt # License name and URL (corresponding to the LICENSE file in the repository)
-├─ use.txt # Intended use and limitations (research purposes, no sensitive data, etc.)
-├─ artifact/ # Main code folder (equivalent to the original code/ folder)
-│ ├─ PeriodProcess/ # Scripts for preprocessing idle traffic and session segmentation
-│ ├─ preProcess/ # Feature extraction and clustering for identifying key packets
-│ ├─ SignatureGeneration/ # Generates device fingerprints based on header features and payload LSH
-│ ├─ SignatureMatching/ # Matching test samples to the stored device fingerprints
-│ ├─ testProcessCode/ # Auxiliary scripts for evaluation, such as confusion matrix generation
-│ └─ data/ # Subset of datasets and instructions for obtaining the full datasets
-│ ├─ samples/ # Optional: minimal subset for offline testing
-│ └─ README.md # Dataset explanation and download instructions
-├─ scripts/ # Scripts to run different stages of the pipeline
-│ ├─ run_all.sh # Sequentially calls all stages (as per numbering in original scripts)
-│ ├─ run_preprocess.sh # Calls preprocessing scripts
-│ ├─ run_fingerprint.sh # Calls fingerprint generation scripts
-│ └─ run_match.sh # Calls the matching script
-├─ claims/ # Folder for reproducibility claims and validation (optional)
-│ └─ claim1/ # Example claim folder (e.g., accuracy claim)
-│ ├─ claim.txt # Brief description of the claim
-│ ├─ run.sh # Script to reproduce the claim result
-│ └─ expected/ # Expected output or validation information (e.g., accuracy threshold)
-└─ infrastructure/ # Folder for infrastructure setup or platform instructions
-└─ README.md # Instructions for running the code on public platforms (e.g., Google Colab)
+## Project Structure
+The project is organized under the `code` directory with the following hierarchy:
+
+```plaintext
+code/
+├── PeriodProcess/
+│   ├── 1_preprocess_traffic.py        # Preprocesses idle-time traffic
+│   ├── 2_analyze_periodicity.py       # Analyzes periodicity using Fourier Transform
+│   ├── 3_segment_samples.py           # Segments samples based on session periodicity
+│   └── ...                            # Other scripts for adaptive sample segmentation
+├── preProcess/
+│   ├── 1_extract_features.py          # Extracts features from traffic samples
+│   ├── 2_cluster_packets.py           # Clusters packets to identify key packets
+│   └── ...                            # Other preprocessing scripts
+├── SignatureGeneration/
+│   ├── 1_generate_header_features.py  # Extracts header features (length, direction, protocol)
+│   ├── 2_compute_lsh.py               # Computes LSH for payload
+│   ├── 3_build_fingerprints.py        # Builds device fingerprints from key packets
+│   └── ...                            # Other fingerprint generation scripts
+├── SignatureMatching/
+│   ├── 1_match_packets.py             # Performs packet-level hierarchical matching
+├── testProcessCode/
+│   ├── 1_split_by_mac.py              # Splits pcap files by device MAC address
+│   ├── 2_evaluate_confusion_matrix.py # Generates confusion matrix for evaluation
+│   └── ...                            # Other auxiliary scripts
 
 ---
 
