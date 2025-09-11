@@ -17,27 +17,18 @@ This folder contains the source code implementing the key steps of the identific
 The project is organized under the `code` directory with the following hierarchy:
 
 ```plaintext
-code/
-├── PeriodProcess/
-│   ├── 1_preprocess_traffic.py        # Preprocesses idle-time traffic
-│   ├── 2_analyze_periodicity.py       # Analyzes periodicity using Fourier Transform
-│   ├── 3_segment_samples.py           # Segments samples based on session periodicity
-│   └── ...                            # Other scripts for adaptive sample segmentation
-├── preProcess/
-│   ├── 1_extract_features.py          # Extracts features from traffic samples
-│   ├── 2_cluster_packets.py           # Clusters packets to identify key packets
-│   └── ...                            # Other preprocessing scripts
-├── SignatureGeneration/
-│   ├── 1_generate_header_features.py  # Extracts header features (length, direction, protocol)
-│   ├── 2_compute_lsh.py               # Computes LSH for payload
-│   ├── 3_build_fingerprints.py        # Builds device fingerprints from key packets
-│   └── ...                            # Other fingerprint generation scripts
-├── SignatureMatching/
-│   ├── 1_match_packets.py             # Performs packet-level hierarchical matching
-├── testProcessCode/
-│   ├── 1_split_by_mac.py              # Splits pcap files by device MAC address
-│   ├── 2_evaluate_confusion_matrix.py # Generates confusion matrix for evaluation
-│   └── ...                            # Other auxiliary scripts
+deviceIdentification/
+├── code/
+│  ├── PeriodProcess/                     # Preprocesses idle-time traffic
+│  ├── preProcess/
+│  ├── SignatureGeneration/
+│  ├── testProcessCode/
+├── code/
+├── code/
+├── README.md                          # This file
+├── LICENSE                            # The project's license
+└── .gitignore                         # Specifies files/folders to ignore in version control
+
 
 ```
 ---
