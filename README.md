@@ -19,17 +19,14 @@ The project is organized under the `code` directory with the following hierarchy
 ```plaintext
 deviceIdentification/
 ├── code/
-│  ├── PeriodProcess/                     # Preprocesses idle-time traffic
-│  ├── preProcess/
-│  ├── SignatureGeneration/
-│  ├── testProcessCode/
-├── code/
-├── code/
-├── README.md                          # This file
+│  ├── PeriodProcess/                     # Scripts for preprocessing idle traffic, segmenting the sessions based on their periodicity.
+│  ├── preProcess/                        # Feature extraction and clustering for identifying key packets in each session.
+│  ├── SignatureGeneration/               # Generates device fingerprints based on packet headers and payloads using Local Sensitive Hashing (LSH).
+│  ├── testProcessCode/                   # Auxiliary scripts for evaluation, including generating confusion matrices and splitting pcap files by MAC address.
+├── datasets and result/               # This folder contains links to public datasets, portions of our proprietary datasets, and some experimental results.
+├── README.md                          # This file is project description.
 ├── LICENSE                            # The project's license
 └── .gitignore                         # Specifies files/folders to ignore in version control
-
-
 ```
 ---
 
@@ -40,7 +37,6 @@ This project requires Python 3.8 and runs on Linux-based systems. The following 
 ### Dependencies:
 - Python 3.8
 - numpy
-- scipy
 - scikit-learn
 - pandas
 - tqdm
@@ -51,3 +47,26 @@ To install the required dependencies, use the following command:
 
 ```bash
 pip install -r requirements.txt
+
+### How to Run the Code:
+
+The pipeline is divided into several stages. Follow the steps below to run the code:
+
+1. Period Process: Run the scripts to process the idle traffic and segment the sessions based on their periodicity.
+
+2. Pre-processing: Extract features and perform clustering to identify key packets.
+
+3. Signature Generation: Generate device fingerprints based on header features and payload LSH.
+
+Each folder contains scripts that should be run sequentially. The results of each stage are saved in separate output directories.
+
+### Dataset and Results:
+
+Dataset:
+
+  The public dataset used in the experiments is the [XYZ dataset](link to dataset), available under the conditions specified by the source.
+  
+  A small subset of the dataset is included in the data/ folder for testing purposes.
+  
+  The full dataset can be obtained by following the instructions in data/README.md.
+
