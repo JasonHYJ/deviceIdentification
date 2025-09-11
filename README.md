@@ -39,6 +39,7 @@ code/
 │   ├── 2_evaluate_confusion_matrix.py # Generates confusion matrix for evaluation
 │   └── ...                            # Other auxiliary scripts
 
+```
 ---
 
 ## Environment Setup
