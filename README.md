@@ -68,7 +68,7 @@ Each folder contains scripts that should be run sequentially. The results of eac
 
 ​	yourthings dataset: https://yourthings.info/.
 
-​	A small subset of the self-collected dataset is included in the folder for testing purposes.
+​	Self-collected datasets can be obtained by contacting us.
 
 ### Results:
 
