@@ -9,24 +9,25 @@ This repository includes the code, a subset of public datasets, and the result v
 
 ## Project Structure
 
-### 1. `artifact/` (Code)
-This folder contains the source code implementing the key steps of the identification pipeline:
-- **PeriodProcess/**: Scripts for preprocessing idle traffic and segmenting sessions based on periodicity.
-- **preProcess/**: Feature extraction and clustering to identify key packets.
-- **SignatureGeneration/**: Generates device fingerprints based on header features and payload LSH.
-- **SignatureMatching/**: Matching test samples to the stored device fingerprints.
-- **testProcessCode/**: Auxiliary scripts for evaluation, including generating confusion matrices and splitting pcap files by MAC address.
-
-### 2. `data/` (Datasets)
-This folder contains:
-- A small subset of public datasets used for testing.
-- Some private pcap samples used for training (without any sensitive data).
-- A `README.md` file that explains how to obtain the full dataset or generate new ones.
-
-### 3. `results/` (Results)
-This folder includes:
-- **figures/**: Generated visualizations such as confusion matrices, ROC curves, and feature importance plots.
-- **csv/**: Output files such as extracted features and fingerprints.
-- **logs/**: Log files for the execution of the scripts, which capture details of the runtime.
+├─ README.txt # 顶层总览与执行指南（必须） ├─ install.sh # 一键安装（建议保留，很简短） ├─ requirements.txt # 依赖清单（建议） ├─ license.txt # 许可证名称与URL（与仓库 LICENSE 对应） ├─ use.txt # 预期用途与限制（研究用途、无敏感数据等） ├─ artifact/ # 你的主体代码（等同于原 code/） │ ├─ PeriodProcess/ │ ├─ preProcess/ │ ├─ SignatureGeneration/ │ ├─ SignatureMatching/ │ ├─ testProcessCode/ │ └─ data/ │ ├─ samples/ # 可选：放极小子集，保证离线可跑 │ └─ README.md # 数据说明/下载方式（如需） ├─ scripts/ │ ├─ run_all.sh # 依序调用四阶段脚本（照你编号调用） │ ├─ run_preprocess.sh │ ├─ run_fingerprint.sh │ └─ run_match.sh ├─ claims/ │ └─ claim1/ │ ├─ claim.txt # 例如“在公开数据集达到≈98.82%” │ ├─ run.sh # 跑一个“缩小版”流程（快） │ └─ expected/ │ └─ check.json # 期望指标或阈值（例如 acc ≥ 0.97） └─ infrastructure/ └─ README.md
 
 ---
+
+## Environment Setup
+
+This project requires Python 3.8 and runs on Linux-based systems. The following dependencies are needed to run the code:
+
+### Dependencies:
+- Python 3.8
+- numpy
+- scipy
+- scikit-learn
+- pandas
+- tqdm
+- matplotlib
+- pcap libraries (e.g., scapy, pyshark)
+
+To install the required dependencies, use the following command:
+
+```bash
+pip install -r requirements.txt
