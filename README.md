@@ -76,7 +76,7 @@ Each folder contains scripts that should be run sequentially. The results of eac
 
 ## License and Usage
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This project is licensed under the Apache License. See the [LICENSE](LICENSE) file for more information.
 
 The code in this repository is intended for academic research purposes. The datasets used in the experiments are publicly available and can be accessed as described above.
 
