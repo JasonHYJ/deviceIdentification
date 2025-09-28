@@ -1,0 +1,9 @@
+# Default parameters for the IoT device identification pipeline
+
+clustering:
+  method: DBSCAN
+  eps: 0.05
+  minPts: 5
+
+lsh matching:
+  threshold: 210
