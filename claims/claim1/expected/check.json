@@ -1,0 +1,4 @@
+{
+  "expected_accuracy": ">=0.97",
+  "note": "On the full Mon(IoT)r dataset, the reported accuracy is 98.82%. On the demo sample data, accuracy should remain above 0.97."
+}

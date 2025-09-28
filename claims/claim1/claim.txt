@@ -1,0 +1,3 @@
+Claim 1: Our method achieves 98.82% device identification accuracy on the Mon(IoT)r dataset, outperforming baseline methods.
+
+This claim can be validated by running the demo pipeline on the provided sample data. The demo reproduces the fingerprint generation and identification process, and the expected accuracy should be at least 0.97 on the sample data.

@@ -1,0 +1,16 @@
+Intended Use and Limitations
+============================
+
+This artifact is released for academic research and reproducibility evaluation
+purposes only.
+
+- It contains source code and sample datasets derived from public IoT traffic
+  collections.
+- The provided PCAPs are small anonymized examples and do not contain sensitive
+  information.
+- The method is designed for smart home device identification in research
+  settings; it is not optimized for commercial deployment or large-scale
+  monitoring without further engineering work.
+
+Users may modify and extend the code under the terms of the included license
+(see license.txt).
