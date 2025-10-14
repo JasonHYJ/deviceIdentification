@@ -33,7 +33,8 @@ Executable Permissions
 ----------------------
 Some scripts require execution permission before running. If you encounter
 "Permission denied" when executing a script, please grant permission using:
-
+    
+    cd deviceIdentification
     chmod +x install.sh
     chmod +x artifact/run_demo.sh
     chmod +x claims/claim1/run.sh
@@ -79,3 +80,4 @@ No GPU is required.
 Contact
 -------
 If you encounter issues during evaluation, please contact the authors.
+
