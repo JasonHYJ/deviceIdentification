@@ -50,7 +50,9 @@ This artifact runs on **Linux (Ubuntu 20.04/22.04)** or **Google Colab** with **
 To install dependencies:
 
 ```
-To install dependencies:
+cd deviceIdentification
+chmod +x install.sh
+./install.sh
 ```
 
 - Dependencies include:
@@ -85,7 +87,8 @@ Some scripts require execution permission before running. If you encounter
 
 Run the full pipeline on the provided sample PCAP:
 
-```bash
+```
+chmod +x artifact/run_demo.sh
 ./artifact/run_demo.sh
 ```
 
@@ -106,6 +109,7 @@ Reproducibility claims are located in the `claims/` directory.
 For example, to reproduce **Claim 1** (accuracy ≥ 0.97 on demo data):
 
 ```
+chmod +x claims/claim1/run.sh
 ./claims/claim1/run.sh
 ```
 
@@ -137,5 +141,12 @@ No sensitive information is included in the provided datasets.  See [use.txt](us
 
 The code in this repository is intended for academic research purposes. The datasets used in the experiments are publicly available and can be accessed as described above.
 
+## Summary of Executable Scripts
+
+| Script                 | Purpose                               |
+| ---------------------- | ------------------------------------- |
+| `install.sh`           | Installs dependencies                 |
+| `artifact/run_demo.sh` | Runs the entire demo pipeline         |
+| `claims/claim1/run.sh` | Validates the main experimental claim |
 
 
