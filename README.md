@@ -67,13 +67,8 @@ chmod +x install.sh
   - seaborn
   - openpyxl
 
-To install the required dependencies, use the following command:
 
-```bash
-pip install -r requirements.txt
-```
-
-Executable Permissions
+Note: Executable Permissions
 ----------------------
 Some scripts require execution permission before running. If you encounter
 "Permission denied" when executing a script, please grant permission using:
