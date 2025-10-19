@@ -5,6 +5,9 @@ This repository contains the artifact for our ACSAC 2025 paper:
 
 The method segments IoT device traffic according to the periodicity of communication sessions, extracts key packet fingerprints, and applies a hierarchical matching mechanism to identify device types. It is designed to enable **real-time smart home device monitoring** and achieves **98.82% accuracy** on public datasets.
 
+**Project Repository:** [https://github.com/JasonHYJ/deviceIdentification](https://github.com/JasonHYJ/deviceIdentification)  
+**Run on Google Colab:** [Open Colab Demo](https://colab.research.google.com/drive/10tKnO-aFad0kPjw_7FpTNk3eipPHM-G-?usp=sharing)
+
 ---
 
 ## 📂 Repository Structure
