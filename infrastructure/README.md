@@ -2,12 +2,9 @@
 
 This artifact supports execution on public cloud infrastructure such as Google Colab and CloudLab.
 
-**Run directly on Google Colab:**  
-[👉 Open the Colab Demo Notebook](https://colab.research.google.com/drive/10tKnO-aFad0kPjw_7FpTNk3eipPHM-G-?usp=sharing)
+**Run on Google Colab:** [Open Colab Demo](https://colab.research.google.com/drive/10tKnO-aFad0kPjw_7FpTNk3eipPHM-G-?usp=sharing)
 
-For full project source and documentation, visit:  
-[GitHub Repository](https://github.com/JasonHYJ/deviceIdentification)
-
+**Project Repository:** [GitHub Repository](https://github.com/JasonHYJ/deviceIdentification)  
 
 This artifact is designed to run on standard Linux environments.  
 It has been tested on:
@@ -30,3 +27,4 @@ It has been tested on:
 
 
 No special hardware or proprietary infrastructure is required.
+
